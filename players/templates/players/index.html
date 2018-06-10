@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong</title>
+    <script>
+        {% if message %}
+            alert('{{ message }}')
+        {% endif %}
+    </script>
+</head>
+<body>
+    <a href="{% url 'players:create_player' %}"><input type="button" id="id_create" value="Create Player"/></a>
+    <a href="{% url 'players:join_game' %}"><input type="button" value="Join Game"/></a>
+</body>
+</html>

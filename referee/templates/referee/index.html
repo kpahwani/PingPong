@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <script>
+        {% if data %}
+            alert('{{ data }}')
+        {% endif %}
+    </script>
+</head>
+<body>
+    <form action="{% url  'referee:list_players' %}" method="get">
+        <input type="submit" value="List Added Players"/>
+    </form>
+    <form action="{% url  'referee:start_game' %}" method="get">
+        <input type="submit" value="Start Championship"/>
+    </form>
+    <form action="{% url  'referee:activate_users' %}" method="get">
+        <input type="submit" value="Set all user active"/>
+    </form>
+    <form action="{% url  'referee:get_results' %}" method="post">
+        <label>Select Championship id : </label>
+        <select name="item_id" required>
+        {% for entry in c_list %}
+            <option value="{{ entry }}" name="c_id">{{ entry }}</option>
+        {% endfor %}
+        </select>
+        <input type="submit" value="Show Results"/>
+    </form>
+    {% if details %}
+        <table border="1">
+            <tr>
+                <th>Game Id</th>
+                <th>Opponent 1</th>
+                <th>Opponent 2</th>
+                <th>Opponent 1 Score</th>
+                <th>Opponent 2 Score</th>
+                <th>Winner</th>
+            </tr>
+            {% for detail in details %}
+                <tr>
+                    {% for key,val in detail.items %}
+                        <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
