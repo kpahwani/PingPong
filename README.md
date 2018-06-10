@@ -33,7 +33,7 @@ Project Structure:
       Application to validate/conduct the championship and present the results.
 
 REST API calls:
-    http://127.0.0.1:8000/referee/activate_users/
+    http://127.0.0.1:8000/referee/activate_users/ <br>
     http://127.0.0.1:8000/referee/all_players/
     http://127.0.0.1:8000/referee/start_game/
     http://127.0.0.1:8000/referee/get_results/
