@@ -34,10 +34,10 @@ Project Structure:
 
 REST API calls:
     http://127.0.0.1:8000/referee/activate_users/ <br>
-    http://127.0.0.1:8000/referee/all_players/
-    http://127.0.0.1:8000/referee/start_game/
-    http://127.0.0.1:8000/referee/get_results/
-
+    http://127.0.0.1:8000/referee/all_players/ <br>
+    http://127.0.0.1:8000/referee/start_game/ <br>
+    http://127.0.0.1:8000/referee/get_results/ <br>
+ 
 Function call:
     The CURD oerations for player application are managed using function call.
     
